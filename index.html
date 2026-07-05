@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AI Vision Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!-- Header -->
+    <header>
+        <h1>AI Vision Assistant</h1>
+        <button id="theme-btn">🌙</button>
+    </header>
+
+    <main class="container">
+
+        <!-- Camera Section -->
+        <section class="camera-section">
+
+            <h2>Live Camera</h2>
+
+            <div class="camera-box">
+                <video id="video" autoplay playsinline muted></video>
+
+                <!-- Hidden canvas for capturing images -->
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <button id="scan-btn">
+                Scan Object
+            </button>
+
+        </section>
+
+
+        <!-- Result Section -->
+        <section class="result-section">
+
+            <h2>Detection Result</h2>
+
+            <div id="result-card">
+
+                <h3 id="object-name">
+                    Waiting for Scan...
+                </h3>
+
+                <p id="object-description">
+                    Place an object in front of the camera and click "Scan Object".
+                </p>
+
+                <p id="fun-fact"></p>
+
+            </div>
+
+
+            <button id="speak-btn">
+                🔊 Speak Again
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- Scan History -->
+    <section class="history-section">
+
+        <h2>Scan History</h2>
+
+        <div id="history-list">
+            <p>No objects scanned yet.</p>
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
