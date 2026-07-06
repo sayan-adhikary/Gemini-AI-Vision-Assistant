@@ -50,7 +50,7 @@ No build tools, no frameworks, no dependencies — just open the file in a brows
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/<your-username>/ai-vision-assistant.git
+git clone https://github.com/sayan-adhikary/Gemini-AI-Vision-Assistant-.git
 cd ai-vision-assistant
 ```
 
