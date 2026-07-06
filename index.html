@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -25,6 +27,12 @@
             <div class="camera-box">
                 <video id="video" autoplay playsinline muted></video>
 
+                // scan Aniation
+                <div id="scan-overlay">
+                    <div class="scan-line"></div>
+                    <p>🤖 AI Analyzing...</p>
+                </div>
+
                 <!-- Hidden canvas for capturing images -->
                 <canvas id="canvas"></canvas>
             </div>
@@ -42,6 +50,7 @@
             <h2>Detection Result</h2>
 
             <div id="result-card">
+                <img id="captured-image" src="" alt="Captured Image">
 
                 <h3 id="object-name">
                     Waiting for Scan...
@@ -55,9 +64,17 @@
 
             </div>
 
+            <label for="voice-select">Choose Voice</label>
+            <select id="voice-select">
+                <option value="">Default Voice</option>
+            </select>
 
             <button id="speak-btn">
                 🔊 Speak Again
+            </button>
+
+            <button id="download-btn">
+                Download Image
             </button>
 
         </section>
@@ -70,6 +87,10 @@
 
         <h2>Scan History</h2>
 
+        <button id="clear-history-btn">
+            Clear History
+        </button>
+
         <div id="history-list">
             <p>No objects scanned yet.</p>
         </div>
@@ -80,4 +101,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
